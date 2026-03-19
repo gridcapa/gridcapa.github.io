@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.7.0">
 <title data-rh="true">Process data | GridCapa</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://gridcapa.github.io/img/logo.svg"><meta data-rh="true" name="twitter:image" content="https://gridcapa.github.io/img/logo.svg"><meta data-rh="true" property="og:url" content="https://gridcapa.github.io/docs/process-documentation/in-cc/export/data"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Process data | GridCapa"><meta data-rh="true" name="description" content="Inputs"><meta data-rh="true" property="og:description" content="Inputs"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://gridcapa.github.io/docs/process-documentation/in-cc/export/data"><link data-rh="true" rel="alternate" href="https://gridcapa.github.io/docs/process-documentation/in-cc/export/data" hreflang="en"><link data-rh="true" rel="alternate" href="https://gridcapa.github.io/docs/process-documentation/in-cc/export/data" hreflang="x-default"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.3b5f9f7a.css">
-<script src="/assets/js/runtime~main.7b4cae12.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.9382b204.js" defer="defer"></script>
 <script src="/assets/js/main.bff539e3.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -19,33 +19,52 @@ new files arrive on the FTP server.</p>
 </ul>
 <p>Where:</p>
 <ul>
-<li><strong>YYYY</strong> is the timestamp year</li>
-<li><strong>MM</strong> is the timestamp month</li>
-<li><strong>DD</strong> is the timestamp day in month</li>
-<li><strong>hh</strong> is the timestamp hour</li>
-<li><strong>mm</strong> is the timestamp minutes (usually 30)</li>
-<li><strong>x</strong> is the timestamp day of the week number (example: if the day is a Wednesday, x=3; if it&#x27;s a Sunday, x=7)</li>
-<li><strong>yy</strong> is the forecast hour of the IDCC run 2 process</li>
-<li><strong>v</strong> is the file version</li>
+<li><strong>YYYY</strong> is the timestamp year,</li>
+<li><strong>MM</strong> is the timestamp month,</li>
+<li><strong>DD</strong> is the timestamp day in month,</li>
+<li><strong>hh</strong> is the timestamp hour,</li>
+<li><strong>mm</strong> is the timestamp minutes (usually 30),</li>
+<li><strong>x</strong> is the timestamp day of the week number (example: if the day is a Wednesday, x=3; if it&#x27;s a Sunday, x=7),</li>
+<li><strong>yy</strong> is the forecast hour of the IDCC run 2 process,</li>
+<li><strong>v</strong> is the file version.</li>
 </ul>
 <p>For a detailed description of the UCTE-DEF format, you can refer to the <a href="https://eepublicdownloads.entsoe.eu/clean-documents/pre2015/publications/ce/otherreports/UCTE-format.pdf" target="_blank" rel="noopener noreferrer">format specification</a>.</p>
-<blockquote>
-<p><strong>?</strong> Open questions:</p>
-<ul>
-<li>Differences with import EC data</li>
-</ul>
-</blockquote>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="crac">CRAC<a href="#crac" class="hash-link" aria-label="Direct link to CRAC" title="Direct link to CRAC">​</a></h3>
-<p>The merged CRAC file must be named as follows: <strong>YYYYMMDD_hhmm_2DX_CO_CRAC_CSEW.xml</strong></p>
-<p>For more information on the CSE CRAC format, see the <a href="https://powsybl.readthedocs.io/projects/openrao/en/latest/input-data/crac/cse.html" target="_blank" rel="noopener noreferrer">OpenRAO documentation</a>.</p>
-<blockquote>
-<p><strong>?</strong> Open questions:</p>
+<p>The CRAC is in a specific format, that follows specific file naming conventions that are used to automatically feed the platform when
+new files arrive on the FTP server.</p>
 <ul>
-<li>To be added: Description of the format</li>
-<li>Name for IDCC process</li>
-<li>Differences with import EC data</li>
+<li>
+<p>The D2CC process is based on merged CRACs that follow the file naming convention: <strong>YYYYMMDD</strong>_<strong>hhmm</strong>_2D<strong>x</strong>_CO_CRAC_Transit_CSE<strong>v</strong>.xml</p>
+</li>
+<li>
+<p>The IDCC run 2 process is based on IDCF files that follow the file naming convention: <strong>YYYYMMDD</strong>_<strong>hhmm</strong>_yy<strong>x</strong>_CO_CRAC_Transit_CSE<strong>v</strong>.xml</p>
+</li>
+<li>
+<p><strong>YYYY</strong> is the timestamp year,</p>
+</li>
+<li>
+<p><strong>MM</strong> is the timestamp month,</p>
+</li>
+<li>
+<p><strong>DD</strong> is the timestamp day in month,</p>
+</li>
+<li>
+<p><strong>hh</strong> is the timestamp hour,</p>
+</li>
+<li>
+<p><strong>mm</strong> is the timestamp minutes (usually 30),</p>
+</li>
+<li>
+<p><strong>x</strong> is the timestamp day of the week number (example: if the day is a Wednesday, x=3; if it&#x27;s a Sunday, x=7),</p>
+</li>
+<li>
+<p><strong>yy</strong> is the forecast hour of the IDCC run 2 process,</p>
+</li>
+<li>
+<p><strong>v</strong> is the file version.</p>
+</li>
 </ul>
-</blockquote>
+<p>For more information on the CSE CRAC format, see the <a href="https://powsybl.readthedocs.io/projects/openrao/en/latest/input-data/crac/cse.html" target="_blank" rel="noopener noreferrer">OpenRAO documentation</a>.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="hardcoded-data">Hardcoded data<a href="#hardcoded-data" class="hash-link" aria-label="Direct link to Hardcoded data" title="Direct link to Hardcoded data">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="raoparameters">RaoParameters<a href="#raoparameters" class="hash-link" aria-label="Direct link to RaoParameters" title="Direct link to RaoParameters">​</a></h3>
 <p>The computations are based on parameters, described in the <a href="https://powsybl.readthedocs.io/projects/openrao/en/latest/parameters.html" target="_blank" rel="noopener noreferrer">OpenRAO documentation</a>.</p>
@@ -54,6 +73,36 @@ Compared to this list, a few parameters might be modified during the computation
 Others, if not defined, are set to the default values listed in the documentation.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="craccreationparameters">CracCreationParameters<a href="#craccreationparameters" class="hash-link" aria-label="Direct link to CracCreationParameters" title="Direct link to CracCreationParameters">​</a></h3>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="configmap">Configmap<a href="#configmap" class="hash-link" aria-label="Direct link to Configmap" title="Direct link to Configmap">​</a></h3>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="outputs">Outputs<a href="#outputs" class="hash-link" aria-label="Direct link to Outputs" title="Direct link to Outputs">​</a></h2></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/process-documentation/in-cc/export/overview"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Export</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/process-documentation/in-cc/export/process-description"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Process description</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#inputs" class="table-of-contents__link toc-highlight">Inputs</a><ul><li><a href="#cgm" class="table-of-contents__link toc-highlight">CGM</a></li><li><a href="#crac" class="table-of-contents__link toc-highlight">CRAC</a></li></ul></li><li><a href="#hardcoded-data" class="table-of-contents__link toc-highlight">Hardcoded data</a><ul><li><a href="#raoparameters" class="table-of-contents__link toc-highlight">RaoParameters</a></li><li><a href="#craccreationparameters" class="table-of-contents__link toc-highlight">CracCreationParameters</a></li><li><a href="#configmap" class="table-of-contents__link toc-highlight">Configmap</a></li></ul></li><li><a href="#outputs" class="table-of-contents__link toc-highlight">Outputs</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/about">About GridCapa</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/user-guide">User guide</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/category/process-documentation">Process documentation</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/technical-architecture">Technical architecture</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/glossary">Glossary</a></li></ul></div><div class="col footer__col"><div class="footer__title">GridCapa process</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/process-documentation/core-cc/overview">Core Capacity Calculation</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/process-documentation/in-cc/overview">IN Capacity Calculation</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/process-documentation/swe-cc/overview">SWE Capacity Calculation</a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/gridcapa/gridcapa-doc" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 RTE (http://www.rte-france.com). Built with Docusaurus.</div></div></div></footer></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="outputs">Outputs<a href="#outputs" class="hash-link" aria-label="Direct link to Outputs" title="Direct link to Outputs">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cse-rao-result">CSE RAO result<a href="#cse-rao-result" class="hash-link" aria-label="Direct link to CSE RAO result" title="Direct link to CSE RAO result">​</a></h3>
+<p>The result of the RAO computation is exported in a file named TTC_Calculation_<strong>YYYYMMDD_hhmm</strong>_2D<strong>x</strong>_CO_RAO_Transit_CSE<strong>v</strong>.xml.</p>
+<ul>
+<li><strong>YYYY</strong> is the timestamp year,</li>
+<li><strong>MM</strong> is the timestamp month,</li>
+<li><strong>DD</strong> is the timestamp day in month,</li>
+<li><strong>hh</strong> is the timestamp hour,</li>
+<li><strong>mm</strong> is the timestamp minutes (usually 30),</li>
+<li><strong>x</strong> is the timestamp day of the week number (example: if the day is a Wednesday, x=3; if it&#x27;s a Sunday, x=7),</li>
+<li><strong>v</strong> is the file version.</li>
+</ul>
+<p>The file format is in a specific CSE RAO result format in XML.</p>
+<blockquote>
+<p><strong>?</strong> To be added:
+description of the file format</p>
+</blockquote>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="rao-logs">RAO logs<a href="#rao-logs" class="hash-link" aria-label="Direct link to RAO logs" title="Direct link to RAO logs">​</a></h3>
+<p>The logs of the RAO computation are exported in a file named rao_logs.txt.</p>
+<p>The detail of the logs is described in the <a href="https://powsybl.readthedocs.io/projects/openrao/en/stable/output-data/rao-logs.html" target="_blank" rel="noopener noreferrer">OpenRAO documentation</a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="network">Network<a href="#network" class="hash-link" aria-label="Direct link to Network" title="Direct link to Network">​</a></h3>
+<p>The network file with applied Preventive Remedial Actions (PRAs) is exported in a file named <strong>YYYYMMDD_hhmm</strong>_2D<strong>x</strong>_ce_Transit_RAO_CSE<strong>v</strong>.uct.</p>
+<ul>
+<li><strong>YYYY</strong> is the timestamp year,</li>
+<li><strong>MM</strong> is the timestamp month,</li>
+<li><strong>DD</strong> is the timestamp day in month,</li>
+<li><strong>hh</strong> is the timestamp hour,</li>
+<li><strong>mm</strong> is the timestamp minutes (usually 30),</li>
+<li><strong>x</strong> is the timestamp day of the week number (example: if the day is a Wednesday, x=3; if it&#x27;s a Sunday, x=7),</li>
+<li><strong>v</strong> is the file version.</li>
+</ul></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/process-documentation/in-cc/export/overview"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Export</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/process-documentation/in-cc/export/process-description"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Process description</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#inputs" class="table-of-contents__link toc-highlight">Inputs</a><ul><li><a href="#cgm" class="table-of-contents__link toc-highlight">CGM</a></li><li><a href="#crac" class="table-of-contents__link toc-highlight">CRAC</a></li></ul></li><li><a href="#hardcoded-data" class="table-of-contents__link toc-highlight">Hardcoded data</a><ul><li><a href="#raoparameters" class="table-of-contents__link toc-highlight">RaoParameters</a></li><li><a href="#craccreationparameters" class="table-of-contents__link toc-highlight">CracCreationParameters</a></li><li><a href="#configmap" class="table-of-contents__link toc-highlight">Configmap</a></li></ul></li><li><a href="#outputs" class="table-of-contents__link toc-highlight">Outputs</a><ul><li><a href="#cse-rao-result" class="table-of-contents__link toc-highlight">CSE RAO result</a></li><li><a href="#rao-logs" class="table-of-contents__link toc-highlight">RAO logs</a></li><li><a href="#network" class="table-of-contents__link toc-highlight">Network</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/about">About GridCapa</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/user-guide">User guide</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/category/process-documentation">Process documentation</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/technical-architecture">Technical architecture</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/glossary">Glossary</a></li></ul></div><div class="col footer__col"><div class="footer__title">GridCapa process</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/process-documentation/core-cc/overview">Core Capacity Calculation</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/process-documentation/in-cc/overview">IN Capacity Calculation</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/process-documentation/swe-cc/overview">SWE Capacity Calculation</a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/gridcapa/gridcapa-doc" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 RTE (http://www.rte-france.com). Built with Docusaurus.</div></div></div></footer></div>
 </body>
 </html>

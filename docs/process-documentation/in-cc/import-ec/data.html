@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.7.0">
 <title data-rh="true">Process data | GridCapa</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://gridcapa.github.io/img/logo.svg"><meta data-rh="true" name="twitter:image" content="https://gridcapa.github.io/img/logo.svg"><meta data-rh="true" property="og:url" content="https://gridcapa.github.io/docs/process-documentation/in-cc/import-ec/data"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Process data | GridCapa"><meta data-rh="true" name="description" content="Inputs"><meta data-rh="true" property="og:description" content="Inputs"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://gridcapa.github.io/docs/process-documentation/in-cc/import-ec/data"><link data-rh="true" rel="alternate" href="https://gridcapa.github.io/docs/process-documentation/in-cc/import-ec/data" hreflang="en"><link data-rh="true" rel="alternate" href="https://gridcapa.github.io/docs/process-documentation/in-cc/import-ec/data" hreflang="x-default"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.3b5f9f7a.css">
-<script src="/assets/js/runtime~main.7b4cae12.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.9382b204.js" defer="defer"></script>
 <script src="/assets/js/main.bff539e3.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -14,33 +14,70 @@
 <p>The CGM is in UCTE-DEF format, version 02. It follows specific file naming conventions that are used to automatically feed the platform when
 new files arrive on the FTP server.</p>
 <ul>
-<li>The D2CC process is based on D2CF files that follow the file naming convention: <strong>YYYYMMDD</strong>_<strong>hhmm</strong>_2D<strong>x</strong>_UX<strong>v</strong>.uct</li>
-<li>The IDCC run 2 process is based on IDCF files that follow the file naming convention: <strong>YYYYMMDD</strong><em><strong>hhmm</strong></em><strong>yyx</strong>_UX<strong>v</strong>.uct</li>
+<li>The D2CC process is based on D2CF files that follow the file naming convention: <strong>YYYYMMDD_hhmm</strong>_2D<strong>x</strong>_UX<strong>v</strong>.uct</li>
+<li>The IDCC run 2 process is based on IDCF files that follow the file naming convention: <strong>YYYYMMDD_hhmm</strong>_<strong>yyx</strong>_UX<strong>v</strong>.uct</li>
 </ul>
 <p>Where:</p>
 <ul>
-<li><strong>YYYY</strong> is the timestamp year</li>
-<li><strong>MM</strong> is the timestamp month</li>
-<li><strong>DD</strong> is the timestamp day in month</li>
-<li><strong>hh</strong> is the timestamp hour</li>
-<li><strong>mm</strong> is the timestamp minutes (usually 30)</li>
-<li><strong>x</strong> is the timestamp day of the week number (example: if the day is a Wednesday, x=3; if it&#x27;s a Sunday, x=7)</li>
-<li><strong>yy</strong> is the forecast hour of the IDCC run 2 process</li>
-<li><strong>v</strong> is the file version</li>
+<li><strong>YYYY</strong> is the timestamp year,</li>
+<li><strong>MM</strong> is the timestamp month,</li>
+<li><strong>DD</strong> is the timestamp day in month,</li>
+<li><strong>hh</strong> is the timestamp hour,</li>
+<li><strong>mm</strong> is the timestamp minutes (usually 30),</li>
+<li><strong>x</strong> is the timestamp day of the week number (example: if the day is a Wednesday, x=3; if it&#x27;s a Sunday, x=7),</li>
+<li><strong>yy</strong> is the forecast hour of the IDCC run 2 process,</li>
+<li><strong>v</strong> is the file version.</li>
 </ul>
 <p>For a detailed description of the UCTE-DEF format, you can refer to the <a href="https://eepublicdownloads.entsoe.eu/clean-documents/pre2015/publications/ce/otherreports/UCTE-format.pdf" target="_blank" rel="noopener noreferrer">format specification</a>.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="crac">CRAC<a href="#crac" class="hash-link" aria-label="Direct link to CRAC" title="Direct link to CRAC">​</a></h3>
+<p>The CRAC is in a specific format, that follows specific file naming conventions that are used to automatically feed the platform when
+new files arrive on the FTP server.</p>
+<ul>
+<li>
+<p>The D2CC process is based on merged CRACs that follow the file naming convention: <strong>YYYYMMDD</strong>_<strong>hhmm</strong>_2D<strong>x</strong>_CO_CRAC_CSE<strong>v</strong>.xml</p>
+</li>
+<li>
+<p>The IDCC run 2 process is based on IDCF files that follow the file naming convention: <strong>YYYYMMDD_hhmm_yyx</strong>_CRAC_CO_CSE<strong>v</strong>.xml</p>
+</li>
+<li>
+<p><strong>YYYY</strong> is the timestamp year,</p>
+</li>
+<li>
+<p><strong>MM</strong> is the timestamp month,</p>
+</li>
+<li>
+<p><strong>DD</strong> is the timestamp day in month,</p>
+</li>
+<li>
+<p><strong>hh</strong> is the timestamp hour,</p>
+</li>
+<li>
+<p><strong>mm</strong> is the timestamp minutes (usually 30),</p>
+</li>
+<li>
+<p><strong>x</strong> is the timestamp day of the week number (example: if the day is a Wednesday, x=3; if it&#x27;s a Sunday, x=7),</p>
+</li>
+<li>
+<p><strong>yy</strong> is the forecast hour of the IDCC run 2 process,</p>
+</li>
+<li>
+<p><strong>v</strong> is the file version.</p>
+</li>
+</ul>
+<p>For more information on the CSE CRAC format, see the <a href="https://powsybl.readthedocs.io/projects/openrao/en/latest/input-data/crac/cse.html" target="_blank" rel="noopener noreferrer">OpenRAO documentation</a>.</p>
 <blockquote>
 <p><strong>?</strong> To be added:</p>
 <ul>
-<li>Description of the format</li>
-<li>Name for IDCC process</li>
 <li>N-2 (Following the blackout in Italy in 2003, Terna&#x27;s risk management requires systematic monitoring of N-2 contingencies on common support under favorable conditions.)</li>
 </ul>
 </blockquote>
-<p>The merged CRAC file must be named as follows: <strong>YYYYMMDD_hhmm_2DX_CO_CRAC_CSEW.xml</strong></p>
-<p>For more information on the CSE CRAC format, see the <a href="https://powsybl.readthedocs.io/projects/openrao/en/latest/input-data/crac/cse.html" target="_blank" rel="noopener noreferrer">OpenRAO documentation</a>.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="glsk">GLSK<a href="#glsk" class="hash-link" aria-label="Direct link to GLSK" title="Direct link to GLSK">​</a></h3>
+<blockquote>
+<p><strong>?</strong> To be added:</p>
+<ul>
+<li>naming convention</li>
+</ul>
+</blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="general-description">General description<a href="#general-description" class="hash-link" aria-label="Direct link to General description" title="Direct link to General description">​</a></h4>
 <p>The Generation and Load Shift Key (GLSK) files are used for transforming any change in the balance of one control area into a change of injections in the nodes of that control area. They are developed based on forecast information about generating units and loads. To avoid creating unrealistic congestions during the generation shift process, TSOs should be able to define both Generation Shift Key (GSK) and Load Shift Key (LSK):</p>
 <ul>
@@ -138,7 +175,7 @@ new files arrive on the FTP server.</p>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="vulcanus">Vulcanus<a href="#vulcanus" class="hash-link" aria-label="Direct link to Vulcanus" title="Direct link to Vulcanus">​</a></h3>
 <p>The Vulcanus document is an Excel (.xls) file that specifies border exchanges for a day. It contains the scheduled exchanges, also called reference exchanges. The file presents data with a frequency of 15 minutes.</p>
-<p>The file must be named according to the following convention: <strong>vulcanus_DDMMYYYY_96.xls</strong> (Note: 96 represents the number of 15-minute intervals in a 24-hour day).</p>
+<p>The file must be named according to the following convention: vulcanus_<strong>DDMMYYYY</strong>_96.xls (Note: 96 represents the number of 15-minute intervals in a 24-hour day).</p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="reference-exchange-for-d2cc">Reference exchange for D2CC<a href="#reference-exchange-for-d2cc" class="hash-link" aria-label="Direct link to Reference exchange for D2CC" title="Direct link to Reference exchange for D2CC">​</a></h4>
 <p>For the D2CC process, the Day-Ahead Schedules are located on Sheet 7. Some columns are written in the direction of Italian export, so the corresponding values (often negative) must be multiplied by -1 to obtain the correct direction.</p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="reference-exchange-for-idcc">Reference exchange for IDCC<a href="#reference-exchange-for-idcc" class="hash-link" aria-label="Direct link to Reference exchange for IDCC" title="Direct link to Reference exchange for IDCC">​</a></h4>
@@ -163,7 +200,7 @@ new files arrive on the FTP server.</p>
 <li><strong>&lt;NTC type=&gt;</strong>: If &quot;absolute&quot;, the value replaces the one from the previous ECHEANCE; if &quot;relative&quot;, the value is added to the previous one</li>
 </ul>
 <p>This data should be considered as the basis for the import but can be overwritten or supplemented by other inputs. It is typically used as backup data if the NTC red file is not available.</p>
-<p>The file must be named according to the following format: <strong>YYYY_2DX_NTC_annual_CSEW.xml</strong></p>
+<p>The file must be named according to the following format: <strong>YYYY</strong>_2D<strong>X</strong>_NTC_annual_CSE<strong>W</strong>.xml</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="ntc-reductions">NTC Reductions<a href="#ntc-reductions" class="hash-link" aria-label="Direct link to NTC Reductions" title="Direct link to NTC Reductions">​</a></h3>
 <p>The NTC reductions file (NTC red) is an XML file that describes the weekly values of NTC values and scheduled flows. These values are computed using a formula that accounts for the latest information on unavailable lines. Specifically, when an AC or HVDC line close to the border is unavailable, the annual NTC value is updated with a predetermined value (FORFAIT) that depends on which lines are unavailable.</p>
 <p>The NTC reductions file follows a similar format to the NTC annual file.</p>
@@ -173,12 +210,12 @@ new files arrive on the FTP server.</p>
 <li>As the initial value for the D2CC process (first step of the dichotomy)</li>
 <li>As the reference value for splitting factors computation</li>
 </ul>
-<p>The file must be named according to the following format: <strong>YYYYMMDD_2DX_NTC_reductions_CSEW.xml</strong>, where X is the day of the week (1 for Monday) and Y is the version number.</p>
+<p>The file must be named according to the following format: <strong>YYYYMMDD</strong>_2D<strong>X</strong>_NTC_reductions_CSE<strong>W</strong>.xml, where <strong>X</strong> is the day of the week (1 for Monday) and <strong>Y</strong> is the version number.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="ntc2">NTC2<a href="#ntc2" class="hash-link" aria-label="Direct link to NTC2" title="Direct link to NTC2">​</a></h3>
 <p>The NTC2 files are XML files containing NTC values updated with the D-2 computation results. Each file contains two CapacityTimeSeries, but only the one with the Italian InArea should be considered (Italian import). There is one NTC2 file for each country except Italy (AT, CH, FR, SI).</p>
 <p>These files are used as the initial values for the IDCC process (first step of the dichotomy).</p>
 <p>The NTC2 files are only available for the IDCC process, as they contain D-2 data.</p>
-<p>The files must be named according to the following format: <strong>NTC2_YYYYMMDD_2DX_PP-ITZ.xml</strong> (where X is the day of the week and PP is the name of the control area, for instance CH). These files are contained in a folder named <strong>22V-TERNA-ECPPRG_10V-RRRRRRRRRRRR_CCC-NTC2_YYYYMMDDVKK</strong> (where RRRRRRRRRRRR is a code for the control area, such as SWISS-ECP-P7, and KK is the version number).</p>
+<p>The files must be named according to the following format: NTC2_<strong>YYYYMMDD</strong>_2D<strong>X_PP</strong>-IT<strong>Z</strong>.xml (where <strong>X</strong> is the day of the week and <strong>PP</strong> is the name of the control area, for instance CH). These files are contained in a folder named 22V-TERNA-ECPPRG_10V-<strong>RRRRRRRRRRRR</strong><em>CCC-NTC2</em><strong>YYYYMMDD</strong>V<strong>KK</strong> (where <strong>RRRRRRRRRRRR</strong> is a code for the control area, such as SWISS-ECP-P7, and <strong>KK</strong> is the version number).</p>
 <p><strong>TODO</strong> Put this somewhere else:</p>
 <ul>
 <li>Low-consumption days to be described here? They are days split in 4 intervals, with a strong limitation of the italian import, because of both a low consumption and a high renewable generation share. The import is limited to turn on thermal power stations that could solve the constraints. The planned maintenances impacting the interconnections are scheduled on such low-consumption days, to limit their impact on the available capacity.</li>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.7.0">
 <title data-rh="true">Process data | GridCapa</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://gridcapa.github.io/img/logo.svg"><meta data-rh="true" name="twitter:image" content="https://gridcapa.github.io/img/logo.svg"><meta data-rh="true" property="og:url" content="https://gridcapa.github.io/docs/process-documentation/swe-cc/data"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Process data | GridCapa"><meta data-rh="true" name="description" content="Inputs"><meta data-rh="true" property="og:description" content="Inputs"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://gridcapa.github.io/docs/process-documentation/swe-cc/data"><link data-rh="true" rel="alternate" href="https://gridcapa.github.io/docs/process-documentation/swe-cc/data" hreflang="en"><link data-rh="true" rel="alternate" href="https://gridcapa.github.io/docs/process-documentation/swe-cc/data" hreflang="x-default"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.3b5f9f7a.css">
-<script src="/assets/js/runtime~main.7b4cae12.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.9382b204.js" defer="defer"></script>
 <script src="/assets/js/main.bff539e3.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -14,9 +14,9 @@
 <p>The CGM is in CGMES format. It follows specific file naming conventions that are used to automatically feed the platform when
 new files appear on the FTP server.</p>
 <ul>
-<li>The D2CC process is based on D2CF files that follow the file naming convention: <strong>YYYYMMDDThhmmZ</strong>_<strong>2D</strong>_<strong>ttt</strong>_<strong>pp</strong>_<strong>vvv</strong>.xml</li>
-<li>The IDCC 1st run process is based on DACF files that follow the file naming convention: <strong>YYYYMMDDThhmmZ</strong>_<strong>1D</strong>_<strong>ttt</strong>_<strong>pp</strong>_<strong>vvv</strong>.xml</li>
-<li>The IDCC 2nd run process is based on IDCF files that follow the file naming convention: <strong>YYYYMMDDThhmmZ</strong>_<strong>xx</strong>_<strong>ttt</strong>_<strong>pp</strong>_<strong>vvv</strong>.xml</li>
+<li>The D2CC process is based on D2CF files that follow the file naming convention: <strong>YYYYMMDD</strong>T<strong>hhmm</strong>Z_2D_<strong>ttt_pp_vvv</strong>.xml</li>
+<li>The IDCC 1st run process is based on DACF files that follow the file naming convention: <strong>YYYYMMDD</strong>T<strong>hhmm</strong>Z_1D_<strong>ttt</strong>_<strong>pp</strong>_<strong>vvv</strong>.xml</li>
+<li>The IDCC 2nd run process is based on IDCF files that follow the file naming convention: <strong>YYYYMMDD</strong>T<strong>hhmm</strong>Z_<strong>xx</strong>_<strong>ttt</strong>_<strong>pp</strong>_<strong>vvv</strong>.xml</li>
 </ul>
 <p>Where:</p>
 <ul>
@@ -35,13 +35,13 @@ new files appear on the FTP server.</p>
 <p><strong>?</strong> Open question: Check what xx stands for</p>
 </blockquote>
 <p>Each CGMES profile for each country is zipped.</p>
-<p>Additionally, two files named <strong>YYYYMMDDThhmmZ</strong><strong><strong>ENTSOE</strong>_<strong>EQBD</strong>_<strong>vvv</strong>.xml and <strong>YYYYMMDDThhmmZ</strong></strong><strong>ENTSOE</strong>_<strong>TPBD</strong>_<strong>vvv</strong>.xml
+<p>Additionally, two files named <strong>YYYYMMDD</strong>T<strong>hhmm</strong>Z_ENTSOE_EQBD_<strong>vvv</strong>.xml and <strong>YYYYMMDD</strong>T<strong>hhmm</strong>Z_ENTSOE_TPBD_<strong>vvv</strong>.xml
 (with the conventions described above) are needed to complete the network description. These two files, called boundary sets, are uploaded less
 frequently as they contain permanent definitions of the equipments and topology in the boundaries of the region.</p>
 <p>For a detailed description of the CGMES format, you can refer to the format specification published on <a href="https://www.entsoe.eu/data/cim/cim-for-grid-models-exchange/" target="_blank" rel="noopener noreferrer">ENTSO-E website</a>,
 or further explanations on <a href="https://powsybl.readthedocs.io/projects/powsybl-core/en/stable/grid_exchange_formats/cgmes/index.html" target="_blank" rel="noopener noreferrer">PowSyBl website</a>,</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="crac">CRAC<a href="#crac" class="hash-link" aria-label="Direct link to CRAC" title="Direct link to CRAC">​</a></h3>
-<p>The merged CRAC file must be named as follows: <strong>10VCORSWEPR-ENDE_18V0000000005KUU_SWE-CRAC-B15-A48-F011_</strong>YYYYMMDD**-<strong>bbb</strong>.xml**</p>
+<p>The merged CRAC file must be named as follows: 10VCORSWEPR-ENDE_18V0000000005KUU_SWE-CRAC-B15-A48-F011_<strong>YYYYMMDD</strong>-<strong>bbb</strong>.xml</p>
 <p>Where:</p>
 <ul>
 <li><strong>YYYY</strong> is the timestamp year</li>
@@ -54,7 +54,7 @@ or further explanations on <a href="https://powsybl.readthedocs.io/projects/pows
 </blockquote>
 <p>The CRAC is in CIM format, described in the <a href="https://powsybl.readthedocs.io/projects/openrao/en/latest/input-data/crac/cim.html" target="_blank" rel="noopener noreferrer">related OpenRAO documentation</a>.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="glsk">GLSK<a href="#glsk" class="hash-link" aria-label="Direct link to GLSK" title="Direct link to GLSK">​</a></h3>
-<p>The merged GLSK file must be named as follows: <strong>10VCORSWEPR-ENDE_18V0000000005KUU_SWE-GLSK-B22-A48-F008_</strong>YYYYMMDD**-<strong>bbb</strong>.xml**</p>
+<p>The merged GLSK file must be named as follows: 10VCORSWEPR-ENDE_18V0000000005KUU_SWE-GLSK-B22-A48-F008_<strong>YYYYMMDD</strong>-<strong>bbb</strong>.xml</p>
 <p>Where:</p>
 <ul>
 <li><strong>YYYY</strong> is the timestamp year</li>
